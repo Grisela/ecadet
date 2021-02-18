@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script defer src="../public/js/app.js"></script>
+</head>
+<body class="bg-light">
+    <!-- nav -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid" id="navGet">
+          <a class="navbar-brand" href="#"><img src="../src/logo/E-Cadet.png" alt="" srcset=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Join Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <form class="d-flex p-2 flex-column">
+                    <input class="form-control me-2 mb-2" type="search" placeholder="Class Code" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Join</button>
+                  </form>
+                </ul>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div>
+                    <img src="../src/ico/notif.svg" alt="" srcset="">
+                    <div style="margin-left: -1vw;" class="badge">0</div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">There is no notif</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="h-25" src="../src/img/user.png" alt="" srcset="">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">My Assignment</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">My Classes</a></li>
+                  <li><a class="dropdown-item" href="#">Setting</a></li>
+                  <li><a class="dropdown-item" href="#">Help & Support</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+
+    <!-- container -->
+    <div class="mt-4 container-fluid d-flex justify-content-between" id="parent">
+
+
+      <div class="container-fluid" id="mainContent">
+          
+      <!-- Discussion post form -->
+        <div class="bg-white border border-gray rounded-1 p-4 mb-4">
+          <form action="" class="p-4 rounded-1 d-flex flex-column">        
+              <div class="mb-2">
+                  <label for="body" class="form-label fw-bold">Discussion</label>
+                  <textarea class="border border-dark form-control" id="body" rows="3"></textarea>
+                </div>
+              <div class="form-group mb-3"></div>
+              <label class="form-label fw-bold">Class</label>
+              <select class="form-select border border-dark" aria-label="Default select example">
+                  <option selected>Class Select</option>
+                  <option value="1">Class A</option>
+                  <option value="2">Class B</option>
+                </select>
+              <div class="form-group mt-4 mb-2 align-self-end">
+                  <a class="btn btn-primary px-4" href="#">Post</a>
+                  <!-- <button type="submit" class="btn btn-primary w-100">Submit</button> -->
+              </div>      
+          </form>
+      </div>
+      <!-- End of Discussion post form -->
+
+      <!-- filter post -->
+      <div class="bg-white border border-gray rounded-1 p-2 d-flex flex-column">
+        <div class="dropdown align-self-end mb-4">
+          <a class="text-dark fw-bold text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter by
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Date</a></li>
+            <li><a class="dropdown-item" href="#">Assignment</a></li>
+            <li><a class="dropdown-item" href="#">Quiz</a></li>
+          </ul>
+        </div>
+        <!-- end of filter post -->
+
+        <!-- dummy post 1 -->
+        <div class="d-flex flex-column p-2">
+          <!-- user and times details -->
+          <div class="d-flex align-items-center">
+            <div class="img-fluid">
+              <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+            </div>
+            <div class="d-flex flex-column lh-1">
+              <p class="fw-bold">User A</p>
+              <small class="fst-italic">Posted x hours ago | Class A</small>
+            </div>
+          </div>
+          <!-- end of user and times details -->
+          <!-- post body -->
+          <div class="d-flex flex-column">
+            <!-- post content -->
+            <div>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate cum dolorum velit optio omnis laboriosam quisquam. Sunt perspiciatis nobis laboriosam.</p>
+            </div>
+            <!-- end of post content -->
+            <!-- comment and share section -->
+            <div class="d-flex justify-content-end fw-lighter" style="cursor: pointer;">
+              <small class="m-2" data-bs-toggle="collapse" data-bs-target="#collapseParent" aria-expanded="false" aria-controls="collapseParent">3 comments</small>
+              <span class="m-2">|</span>
+              <small class="m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">share</small>
+            </div>
+            <!-- end of comment and share section -->
+          </div>
+          <!-- end of post body -->
+          
+          <!-- comment parent -->
+          <div class="collapse" id="collapseParent">
+            <div class="card card-body mt-3">
+
+              <div>
+                <!-- user times and details on parent comment -->
+                <div class="d-flex align-items-center vw-75">
+                  <div class="img-fluid">
+                    <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+                  </div>
+                  <div class="d-flex flex-column lh-1">
+                    <p class="fw-bold">User C</p>
+                    <small class="fst-italic">Posted x hours ago</small>
+                  </div>
+                </div>
+                <!-- end of user times and details on parent comment -->
+                <!-- post body child -->
+                <div class="d-flex flex-column">
+                  <!-- post body content -->
+                  <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <!-- end of post body content -->
+                  <!-- reply section -->
+                  <div style="cursor: pointer;" class="d-flex justify-content-end fw-lighter" data-bs-toggle="collapse" data-bs-target="#collapseChild3" aria-expanded="false" aria-controls="collapseChild3">
+                    <small class="m-2">0 Reply</small>
+                  </div>
+                  <!-- end of reply section -->
+                  <!-- reply child 3 collapse section -->
+                  <div class="collapse" id="collapseChild3">
+                    <div>
+                      
+                      <form action="" class="p-4 d-flex flex-column">
+                        <div class="mb-3">
+                          <input class="border border-dark form-control" id="" type="text" placeholder="" aria-label="">
+                        </div>
+                        <div class="form-group mb-2 align-self-end">
+                          <a class="btn btn-primary px-4" href="#">Reply</a>
+                      </div>
+                      </form>
+
+                    </div>
+                  </div>
+                  <!-- end of reply child 3 collapse section -->
+              </div>
+              <!-- end of post body child -->
+
+              <!-- post body child 2 -->
+              <div>
+                <!-- user times and details -->
+                <div class="d-flex align-items-center vw-75">
+                  <div class="img-fluid">
+                    <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+                  </div>
+                  <div class="d-flex flex-column lh-1">
+                    <p class="fw-bold">User D</p>
+                    <small class="fst-italic">Posted x hours ago</small>
+                  </div>
+                </div>
+                <!-- end of user times and details -->
+                <!-- post child 2 -->
+                <div class="d-flex flex-column">
+                  <!-- post body content -->
+                  <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <!-- end of post body content -->
+                  <!-- child reply section -->
+                  <div style="cursor: pointer;" class="d-flex justify-content-end fw-lighter" data-bs-toggle="collapse" data-bs-target="#collapseChild" aria-expanded="false" aria-controls="collapseChild">
+                    <small class="m-2">1 Reply</small>
+                  </div>
+                  <!-- end of child reply section -->
+              </div>
+              <!-- end of post child 2 -->
+              <!-- collapse child 2 -->
+                <div class="collapse" id="collapseChild">
+                  
+                  <div>
+                    <div class="d-flex flex-column m-3">
+                      <div class="d-flex align-items-center">
+                        <div class="img-fluid">
+                          <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+                        </div>
+                        <div class="d-flex flex-column lh-1">
+                          <p class="fw-bold">User B</p>
+                          <small class="fst-italic">Posted x hours ago</small>
+                        </div>
+                      </div>
+                      <p>Lorem ipsum, dolor sit amet adipisicing elit. Adipisci, dolore!</p>
+                    </div>
+
+                    
+                    <form action="" class="p-4 d-flex flex-column">
+                      <div class="mb-3">
+                        <input class="border border-dark form-control" id="" type="text" placeholder="" aria-label="">
+                      </div>
+                      <div class="form-group mb-2 align-self-end">
+                        <a class="btn btn-primary px-4" href="#">Reply</a>
+                    </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              <!-- end of post body child 2 -->
+
+              <form action="" class="p-1 rounded-1 d-flex flex-column">
+                <div class="mb-2">
+                    <textarea class="border border-dark form-control" id="body" rows="3"></textarea>
+                  </div>
+                <div class="form-group mt-4 mb-2 align-self-end">
+                    <a class="btn btn-primary px-4" href="#">Reply</a>
+                </div>      
+            </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- dummy post 2 -->
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center">
+            <div class="img-fluid">
+              <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+            </div>
+            <div class="d-flex flex-column lh-1">
+              <p class="fw-bold">User A</p>
+              <small class="fst-italic">Posted x hours ago | Class A</small>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, esse.</p>
+            <div class="border border-dark rounded-2 p-2">
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Assignment</p>
+                <a href="#"><img src="../src/ico/external-link.svg" alt="" srcset=""></a>
+              </div>
+              <div class="d-flex">
+                <img class="h-100" src="../src/ico/file-text.svg" alt="" srcset="">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <small class="fw-bold text-danger fst-italic">Due dd/mm/yyyy</small>
+              
+            </div>
+            <!-- comment and share section -->
+            <div class="d-flex justify-content-end fw-lighter mt-3" style="cursor: pointer;">
+              <small class="m-2" data-bs-toggle="collapse" data-bs-target="#collapseParent2" aria-expanded="false" aria-controls="collapseParent2">0 comments</small>
+              <span class="m-2">|</span>
+              <small class="m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">share</small>
+            </div>
+            <!-- end of comment and share section -->
+            <!-- collapse parent 2 -->
+            <div class="collapse" id="collapseParent2">
+              <div>
+                <form action="" class="p-1 rounded-1 d-flex flex-column">
+                  <div class="mb-2">
+                      <textarea class="border border-dark form-control" id="body" rows="3"></textarea>
+                    </div>
+                  <div class="form-group mt-4 mb-2 align-self-end">
+                      <a class="btn btn-primary px-4" href="#">Reply</a>
+                  </div>      
+              </form>
+
+              </div>
+            </div>
+            <!-- end of collapse parent 2 -->
+          </div>
+        </div>
+        <!-- end of dummy post 2 -->
+
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center">
+            <div class="img-fluid">
+              <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+            </div>
+            <div class="d-flex flex-column lh-1">
+              <p class="fw-bold">User C</p>
+              <small class="fst-italic">Posted x hours ago | Class B</small>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum esse, tempora similique quidem, fugiat earum placeat culpa ex labore amet, eveniet dignissimos nemo rem rerum? Modi fugit repudiandae tempora!</p>
+            
+            <!-- comment and share section -->
+            <div class="d-flex justify-content-end fw-lighter mt-3" style="cursor: pointer;">
+              <small class="m-2" data-bs-toggle="collapse" data-bs-target="#collapseParent4" aria-expanded="false" aria-controls="collapseParent4">0 comments</small>
+              <span class="m-2">|</span>
+              <small class="m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">share</small>
+            </div>
+            <!-- end of comment and share section -->
+            <!-- collapse parent 4 -->
+            <div class="collapse" id="collapseParent4">
+              <div>
+                <form action="" class="p-1 rounded-1 d-flex flex-column">
+                  <div class="mb-2">
+                      <textarea class="border border-dark form-control" id="body" rows="3"></textarea>
+                    </div>
+                  <div class="form-group mt-4 mb-2 align-self-end">
+                      <a class="btn btn-primary px-4" href="#">Reply</a>
+                  </div>      
+              </form>
+
+              </div>
+            </div>
+            <!-- end of collapse parent 4 -->
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center">
+            <div class="img-fluid">
+              <img class="p-2" src="../src/img/userdef.png" alt="" srcset="">
+            </div>
+            <div class="d-flex flex-column lh-1">
+              <p class="fw-bold">User B</p>
+              <small class="fst-italic">Posted x hours ago | Class C</small>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dolore quibusdam, eaque asperiores magni, illum ullam magnam doloremque qui itaque in corrupti soluta suscipit tempore.</p>
+            
+            <!-- comment and share section -->
+            <div class="d-flex justify-content-end fw-lighter mt-3" style="cursor: pointer;">
+              <small class="m-2" data-bs-toggle="collapse" data-bs-target="#collapseParent5" aria-expanded="false" aria-controls="collapseParent5">0 comments</small>
+              <span class="m-2">|</span>
+              <small class="m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">share</small>
+            </div>
+            <!-- end of comment and share section -->
+            <!-- collapse parent 5 -->
+            <div class="collapse" id="collapseParent5">
+              <div>
+                <form action="" class="p-1 rounded-1 d-flex flex-column">
+                  <div class="mb-2">
+                      <textarea class="border border-dark form-control" id="body" rows="3"></textarea>
+                    </div>
+                  <div class="form-group mt-4 mb-2 align-self-end">
+                      <a class="btn btn-primary px-4" href="#">Reply</a>
+                  </div>      
+              </form>
+
+              </div>
+            </div>
+            <!-- end of collapse parent 2 -->
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      </div>
+
+      <div class="d-flex flex-column bg-white" id="assignmentBlock">
+        <!-- Assignment section -->
+        <div class="d-flex flex-column mb-2 border border-gray rounded-2 p-2">
+          <p class="fw-bold">Assignment</p>
+          <ul style="list-style: none;">
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/file-earmark-text-fill.svg" alt="" srcset=""></span> Assignment A</p>
+                  <small class="ms-4 font-light text-danger fst-italic">Due dd/mm/yyyy | Class A</small>
+                </div>
+              </a>  
+            </li>
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/file-earmark-text-fill.svg" alt="" srcset=""></span> Assignment B</p>
+                  <small class="ms-4 font-light text-danger fst-italic">Due dd/mm/yyyy | Class C</small>
+                </div>
+              </a>  
+            </li>
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/file-earmark-text-fill.svg" alt="" srcset=""></span> Assignment C</p>
+                  <small class="ms-4 font-light text-danger fst-italic">Due dd/mm/yyyy | Class C</small>
+                </div>
+              </a>  
+            </li>
+          </ul>
+          <a class="text-decoration-none text-dark fw-bold" href="#">All Assignments</a>
+        </div>
+        <!-- end of assignment section -->
+        <!-- classes section -->
+        <div class="d-flex flex-column mb-2 border border-gray rounded-2 p-2">
+          <p class="fw-bold">My Classes</p>
+          <ul style="list-style: none;">
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/journal-bookmark-fill.svg" alt="" srcset=""></span> Class A</p>
+                  <small class="ms-4 font-light text-secondary fst-italic">Survival</small>
+                </div>
+              </a>  
+            </li>
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/journal-bookmark-fill.svg" alt="" srcset=""></span> Class B</p>
+                  <small class="ms-4 font-light text-secondary fst-italic">Canoeing</small>
+                </div>
+              </a>  
+            </li>
+            <li class="mb-4">
+              <a class="text-decoration-none text-dark" href="#">
+                <div class="d-flex flex-column lh-1">
+                  <p> <span><img src="../src/ico/journal-bookmark-fill.svg" alt="" srcset=""></span> Class C</p>
+                  <small class="ms-4 font-light text-secondary fst-italic">First-aid</small>
+                </div>
+              </a>  
+            </li>
+          </ul>
+          <a class="text-decoration-none text-dark fw-bold" href="#">All Classes</a>
+        </div>
+        <!-- end of classes section -->
+
+      </div>
+    </div>
+    <!-- end of container -->
+
+    <!-- share modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Share Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-between p-4">
+              <div class="d-flex flex-column">
+                <img class="p-2" src="../src/ico/facebook.svg" alt="" srcset="">
+                <small>facebook</small>
+              </div>
+              <div class="d-flex flex-column">
+                <img class="p-2" src="../src/ico/whatsapp.svg" alt="" srcset="">
+                <small>whatsapp</small>
+              </div>  
+              <div class="d-flex flex-column">
+                <img class="p-2" src="../src/ico/instagram.svg" alt="" srcset="">
+                <small>instagram</small>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of share modal -->
+
+    <!-- footer -->
+    <div class="mt-4 d-flex justify-content-center bg-primary text-white">
+      <p class="m-2">contact</p>
+      <p class="m-2">copyright &copy 2021 E-Cadet</p>
+    </div>
+
+</body>
+</html>
